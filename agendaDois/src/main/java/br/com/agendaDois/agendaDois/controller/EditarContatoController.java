@@ -1,0 +1,13 @@
+package br.com.agendaDois.agendaDois.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class EditarContatoController {
+
+	@GetMapping(value = "/editarContato")
+	public String editarContato () {
+	return "editarContato";
+}
+}

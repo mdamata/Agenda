@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Funcionários</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --bg-primary: #1E2A47;
+        --bg-secondary: #3A4568;
+        --text-color: #E1E8EE;
+        --accent-color: #5260F0;
+        --accent-hover: #4352D0;
+        --border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+    }
+
+    .form-container {
+      background: var(--bg-secondary);
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: var(--text-color);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-label {
+      font-weight: 400;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-control {
+      background-color: var(--bg-primary);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control::placeholder {
+      color: rgba(225, 232, 238, 0.5);
+    }
+
+    .form-control:focus {
+      background-color: var(--bg-primary);
+      color: var(--text-color);
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 0.25rem rgba(82, 96, 240, 0.25);
+    }
+
+    .btn-action {
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: none;
+      font-size: 1rem;
+    }
+    
+    .btn-submit {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+    }
+    
+    .btn-submit:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-back {
+      background-color: #6c757d;
+      color: var(--text-color);
+    }
+    
+    .btn-back:hover {
+      background-color: #5a6268;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro de Funcionário</h2>
+    <form method="POST" action="/cadastro">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome completo" required>
+      </div>
+      
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
+      </div>
+      
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="cargo" class="form-label">Cargo</label>
+        <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Ex: Desenvolvedor, Gerente" required>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="btn btn-action btn-submit flex-grow-1">Cadastrar</button>
+        <a href="/" class="btn btn-action btn-back flex-grow-1">Voltar</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

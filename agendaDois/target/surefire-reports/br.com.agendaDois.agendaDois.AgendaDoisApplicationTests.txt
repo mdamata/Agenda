@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.agendaDois.agendaDois.AgendaDoisApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.416 s -- in br.com.agendaDois.agendaDois.AgendaDoisApplicationTests
